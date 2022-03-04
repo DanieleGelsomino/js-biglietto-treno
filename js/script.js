@@ -17,18 +17,18 @@ if (etàPasseggero <=18){
     const prezzoTotale = (prezzoTicket / 100) * 80;
     const prezzoTotaleFinale = prezzoTotale.toFixed(2);
     console.log('costo totale del biglietto scontato al 20%: ' + prezzoTotaleFinale + '€')
-    document.getElementById("prezzoTotale").innerText = 
-    `Il costo totale del biglietto per il passeggero con età ${etàPasseggero} anni è di:
-    ${prezzoTotaleFinale} €`;
+    document.getElementById("prezzoTotale").innerHTML = 
+    `Il costo totale del biglietto <span>(-20%)</span> per il passeggero con età ${etàPasseggero} anni è di:
+    <span>${prezzoTotaleFinale} €</span> `;
 
 // calcolo prezzo del biglietto con lo sconto del 40% se etàPasseggero è > 65 
 }else if(etàPasseggero >=65){
     const prezzoTotale = (prezzoTicket / 100) * 60;
     const prezzoTotaleFinale = prezzoTotale.toFixed(2);
     console.log('costo totale del biglietto scontato al 40%: ' + prezzoTotaleFinale + '€')
-    document.getElementById("prezzoTotale").innerText = 
-    `Il costo totale del biglietto per il passeggero con età ${etàPasseggero} anni è di:
-    ${prezzoTotaleFinale} €`;
+    document.getElementById("prezzoTotale").innerHTML = 
+    `Il costo totale del biglietto <span>(-40%)</span> per il passeggero con età ${etàPasseggero} anni è di:
+    <span>${prezzoTotaleFinale} €</span>`;
 
 }else{
     const prezzoTotale = prezzoTicket;
